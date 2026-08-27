@@ -2,7 +2,6 @@
 title: "Day 5: Data Visualization In-Class Activity"
 subtitle: "Exploring Data with ggplot2 and Basic Mapping"
 author: "Econ 122"
-date: "`r Sys.Date()`"
 output: github_document
 ---
 
