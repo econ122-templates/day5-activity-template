@@ -119,7 +119,13 @@ Create a bar chart showing the count of cars based on `vs` (engine type: V-engin
 Create a line plot of `psavert` (personal savings rate) over `date` from the `economics` dataset.
 
 * Add a `geom_line()`.
-* Overlay a smooth trend line using `geom_smooth(method = "gam", se = TRUE)` (Generalized Additive Model).
+* Overlay a smooth trend line using `geom_smooth(method = "gam", se = TRUE)`.
+    * On the slides we used `method = "lm"`, which fits a single **straight line**
+      through the data — one slope for the whole series.
+    * `method = "gam"` (Generalized Additive Model) fits a **flexible curve** that
+      can bend to follow local ups and downs. Use it when the relationship clearly
+      is not a straight line, as here.
+    * `se = TRUE` adds a shaded band showing uncertainty around the fitted curve.
 * Add appropriate titles and labels.
 
 ```{r ex_1_4, fig.width=7, fig.height=4, eval=TRUE}
@@ -188,7 +194,7 @@ Overlay major rivers onto your Continental US states map to visualize linear spa
 
 ---
 
-## Wrap-up & Discussion Points
+## Wrap-up & Discussion Points (5 minutes)
 
 Take a few minutes to review your plots and consider the following questions. We'll discuss these as a class.
 
@@ -196,6 +202,6 @@ Take a few minutes to review your plots and consider the following questions. We
 2.  How did using different aesthetic mappings (like `fill` for engine/transmission types) help you understand the car data better?
 3.  For the choropleth map of **Continental US State Population**, did the `cividis` color scheme with the logarithmic transformation make the variations clearer? Why or why not?
 4.  What's one new `ggplot2` function or concept you learned today that you think will be most useful for your future data analysis?
-5.  Think of a real-world dataset you've encountered. Which of the visualization techniques practiced today would be most suitable for exploring it, and and why?
+5.  Think of a real-world dataset you've encountered. Which of the visualization techniques practiced today would be most suitable for exploring it, and why?
 
 ---
